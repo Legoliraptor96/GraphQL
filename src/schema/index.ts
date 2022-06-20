@@ -1,5 +1,5 @@
-import { GraphQLObjectType, GraphQLSchema } from "graphql"
-import{GREETING} from "./Queries/Greeting"
+import { GraphQLObjectType, GraphQLSchema } from "graphql";
+import{GREETING} from "./Queries/Greeting";
 
 
 const RootQuery = new GraphQLObjectType({
