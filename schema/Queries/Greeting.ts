@@ -1,4 +1,4 @@
-import { GraphQLString } from "graphql"
+import {GraphQLString} from "graphql"
 
 export const GREETING = {
     type: GraphQLString,

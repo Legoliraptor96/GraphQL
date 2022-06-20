@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLSchema } from "graphql";
+import { GraphQLObjectType, GraphQLSchema } from "graphql"
 import{GREETING} from "./Queries/Greeting"
 
 
@@ -11,5 +11,4 @@ const RootQuery = new GraphQLObjectType({
 
 export const schema = new GraphQLSchema({
     query: RootQuery,
-    mutation:{}
 })
