@@ -1,7 +1,7 @@
 import app from "./app"
 import {connectDB} from "./db"
 
-function main(){
+async function main(){
 try{
     await connectDB();
     app.listen(3000);

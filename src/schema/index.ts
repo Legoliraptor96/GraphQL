@@ -9,6 +9,15 @@ const RootQuery = new GraphQLObjectType({
     }
 })
 
+const Mutation = new GraphQLObjectType({
+    name : "Mutation",
+    fields: {
+        createUser:
+    },
+})
+    
+
 export const schema = new GraphQLSchema({
     query: RootQuery,
+    mutation: Mutation,
 })
