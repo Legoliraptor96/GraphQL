@@ -1,8 +1,10 @@
 import { GraphQLString } from "graphql"
 import {Users} from "../../Entities/Users"
+import { UserType } from "../typeDefs/User"
+
 
 export const CREATE_USER = {
-    type:GraphQLString,
+    type:UserType,
     args:{
             name:{type: GraphQLString},
             username: {type: GraphQLString},
@@ -11,6 +13,8 @@ export const CREATE_USER = {
     async resolve(_: any, args: any){
         const{name,username,password}=args
 
+
+        
         const result = await Users.insert({
             name:name,
             username:username,
@@ -19,6 +23,6 @@ export const CREATE_USER = {
 
         console.log(result)
 
-        return "user create"
+        return {...args,id: result.identifiers[0].id}
     }
 }
